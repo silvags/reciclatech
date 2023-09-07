@@ -3,22 +3,23 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 
-##Descrição do Projeto
+## Descrição do Projeto
+
 MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega Voluntáiria) para descarte de resíduos eletrõnicos e recicláveis.
 
-##Funcionalidades
+## Funcionalidades
 
-##Tecnologias utilizadas
+## Tecnologias utilizadas
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 
-##Instalação e utilização
+## Instalação e utilização
 
-###Prérequisitos
+### Prérequisitos
 
-###Instalação
+### Instalação
 
-##Colaboradores
+## Colaboradores
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
