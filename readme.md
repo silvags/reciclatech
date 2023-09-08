@@ -24,7 +24,7 @@ MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega 
 - Bruna Pillon Pacheco [@BrunaPpacheco](https://github.com/BrunaPpacheco)
 - Geovane de Souza Silva [@silvags](https://github.com/silvags)
 - Ingrid da Cruz Santos [@LillyButterfly](https://github.com/LillyButterfly)
-- Marianna Barbosa Prugovechi [@mariprugovechi] (https://github.com/mariprugovechi)
+- Marianna Barbosa Prugovechi [@mariprugovechi](https://github.com/mariprugovechi)
 - Mel Menezes Carvalho
 - Vanessa Gellert da Costa
 
