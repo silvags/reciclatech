@@ -9,7 +9,8 @@ const router = express.Router();
 router.post('/userAddress', geocodingController.getGeocoding);
 // Rota para obter a geolocalização do usuário
 router.post('/userCoordinates', geolocationController.getGeolocation);
-router.get('/pevs/:residue?', pevController.getPevs);
+// Rota para obter PEVs com base no tipo de resíduo selecionado
+router.get('/pevs/:residue', pevController.getPevs);
 // Rota para obter os dados de um PEV específico indicado no mapa
 router.get('/pev/:id', pevController.getPev);
 

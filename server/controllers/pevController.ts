@@ -5,19 +5,28 @@ import Pev from '../models/pevModel';
 
 const pevController = {
   getPevs: (req: Request, res: Response) => {
-    const residue = req.params.residue; // Obtém o tipo de resíduo (ou undefined)
+    // Obtém o tipo de resíduo (recicláveis ou eletrônicos) do arquivo geojson
+    const residue = req.params.residue; 
     const filePath = path.join(__dirname, '../data/pevs.geojson');
     const pevsData = fs.readFileSync(filePath, 'utf8');
     const allPevs: Pev[] = JSON.parse(pevsData).features.map((feature: any) => feature);
 
-    // Filtrar os PEVs com base no tipo de resíduo, se fornecido
-    const filteredPevs = residue
-      ? allPevs.filter((pev: Pev) => pev.properties.residuesAccepted.recyclables.includes(residue))
-      : allPevs;
+    // Filtra os PEVs com base no tipo de resíduo selecionado
+    let filteredPevs: Pev[] = [];
+    
+    if (residue === "recyclables" || residue === "electronics"){
+      filteredPevs = allPevs.filter(pev => {
+        if (residue === "recyclables"){
+          return pev.properties.residuesAccepted.recyclables.length > 0;
+        } else {
+          return pev.properties.residuesAccepted.electronics.length > 0;
+        }
+      });
+    }
 
-    res.status(200).json(filteredPevs);
+        res.status(200).json(filteredPevs);
   },
-
+  // Obtém os dados de um PEV específico indicado no mapa
   getPev: (req: Request, res: Response) => {
     const pevId = req.params.id;
     const filePath = path.join(__dirname, '../data/pevs.geojson');
