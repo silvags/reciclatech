@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.btn_style {
+  max-width: fit-content;
+  background-color: $secondary;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 700;
+  font-size: $size-sm;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
