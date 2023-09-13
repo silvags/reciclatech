@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.div_style {
+  width: 90vw;
+  max-width: 700px;
+  margin: auto;
+  padding: 10px 15px;
+  border: 1px solid $secondary;
+  background-color: $white;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  gap: 10px;
+
+  input {
+    width: 100%;
+    font-size: $size-sm;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  svg {
+    color: $gray;
+  }
+}
