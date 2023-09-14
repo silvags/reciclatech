@@ -4,6 +4,8 @@ import classes from './style.module.scss'
 import { FaUserAlt, FaFingerprint, FaLock } from 'react-icons/fa'
 import { MdAlternateEmail } from 'react-icons/md'
 import { Button } from '@/presentation/components/Button'
+import Link from 'next/link'
+import { AiOutlineQuestionCircle } from 'react-icons/ai'
 
 export function RegisterPage() {
   return (
@@ -40,7 +42,12 @@ export function RegisterPage() {
         />
         <div>
           <input type="checkbox" id="privacy_policy" name="privacy_policy" />
-          <label htmlFor="privacy_policy">Eu li e concordo com a política de privacidade e segurança</label>
+          <label htmlFor="privacy_policy">
+            Eu li e concordo com a política de privacidade e segurança.
+            <Link href="/politica-privacidade">
+              <AiOutlineQuestionCircle />
+            </Link>
+          </label>
         </div>
         <Button asChild>
           <button type="submit">Cadastrar</button>

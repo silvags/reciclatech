@@ -2,8 +2,7 @@ import { Button } from "@/presentation/components/Button"
 import { Container } from "@/presentation/components/Container"
 import { Logo } from "@/presentation/components/Logo"
 import { Title } from "@/presentation/components/Title"
-import classes from './style.module.scss'
-
+import classes from "./style.module.scss"
 
 export function HowToPage() {
   return (

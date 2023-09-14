@@ -25,5 +25,24 @@
       margin: auto;
       gap: 15px;
     }
+
+    input[type="checkbox"], label {
+      font-size: $size-sm;
+    }
+
+    a {
+      margin-left: 5px;
+      color: $secondary;
+      font-size: $size-sm;
+
+      svg {
+        background-color: #ffffff;
+        border-radius: 50px;
+      }
+    }
+
+    button[type="submit"] {
+      margin-top: 25px;
+    }
   }
 }

@@ -1,10 +1,12 @@
 @import '../../../styles/variables.scss';
 
 .btn_style {
-  max-width: fit-content;
+  width: fit-content;
+  max-width: 400px;
   background-color: $secondary;
   margin: 0 auto;
   text-transform: uppercase;
+  text-align: center;
   color: $white;
   font-weight: 700;
   font-size: $size-sm;
