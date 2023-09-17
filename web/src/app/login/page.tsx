@@ -1,3 +1,5 @@
+'use client'
+
 import { Navigation } from "@/presentation/components/Navigation";
 import { LoginPage } from "@/presentation/pages/Login";
 

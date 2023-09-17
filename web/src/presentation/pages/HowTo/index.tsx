@@ -3,8 +3,11 @@ import { Container } from "@/presentation/components/Container"
 import { Logo } from "@/presentation/components/Logo"
 import { Title } from "@/presentation/components/Title"
 import classes from "./style.module.scss"
+import { useRouter } from "next/navigation"
 
 export function HowToPage() {
+  const router = useRouter()
+
   return (
     <section className={classes.section_style}>
       <Logo />
@@ -22,7 +25,11 @@ export function HowToPage() {
           <p><strong>Lixo comum:</strong> Evite colocar dispositivos eletrônicos no lixo comum, pois isso pode resultar na contaminação do meio ambiente devido aos materiais tóxicos e metais presentes.</p>
         </div>
       </Container>
-      <Button href="/#">Próximo</Button>
+      <Button asChild>
+        <button onClick={() => router.back()}>
+          Voltar
+        </button>
+      </Button>
     </section>
   )
 }

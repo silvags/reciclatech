@@ -1,3 +1,5 @@
+'use client'
+
 import { Navigation } from "@/presentation/components/Navigation";
 import { RecyclablePage } from "@/presentation/pages/Recyclable";
 

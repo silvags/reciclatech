@@ -9,7 +9,7 @@ export function MapPage() {
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY as string
   })
 
-  if (!isLoaded) return <div>Loading</div>
+  if (!isLoaded) return <div className={classes.loading}>Carregando...</div>
   return (
     <Map />
   )

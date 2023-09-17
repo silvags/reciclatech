@@ -66,7 +66,7 @@ export function PrivacyPolicyPage() {
         </div>
       </Container>
       <Button asChild>
-        <button onClick={() => router.back() }>Voltar</button>
+        <button onClick={() => router.back()}>Voltar</button>
       </Button>
     </section>
   )

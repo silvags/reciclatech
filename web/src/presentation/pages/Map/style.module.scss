@@ -1,4 +1,10 @@
 .map_container {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: calc(100vh - 90px);
+}
+
+.loading {
+  width: 100vw;
+  margin-top: 40vh;
+  text-align: center;
 }

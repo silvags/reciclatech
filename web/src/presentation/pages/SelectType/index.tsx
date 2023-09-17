@@ -16,7 +16,7 @@ export function SelectTypePage() {
           width={30}
           height={75}
         />
-        <Button href="/#">Lixo eletrônico</Button>        
+        <Button href="/mapa">Lixo eletrônico</Button>        
       </div>
       <div className={classes.type_style}>
       <Image
@@ -25,7 +25,7 @@ export function SelectTypePage() {
         width={84}
         height={75}
       />
-      <Button href="/#">Lixo reciclável</Button>
+      <Button href="/mapa">Lixo reciclável</Button>
       </div>
     </section>
   )

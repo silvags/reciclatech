@@ -11,7 +11,9 @@ export function Navigation() {
       <Link href="/">
         <AiFillHome />
       </Link>
-      <MdLocationOn />
+      <Link href="/selecionar-tipo">
+        <MdLocationOn />
+      </Link>
       <FaUserAlt />
       <GiHamburgerMenu />
     </nav>

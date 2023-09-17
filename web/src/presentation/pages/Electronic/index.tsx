@@ -2,9 +2,12 @@ import { Button } from "@/presentation/components/Button"
 import { Container } from "@/presentation/components/Container"
 import { Logo } from "@/presentation/components/Logo"
 import { Title } from "@/presentation/components/Title"
-import classes from './style.module.scss'
+import { useRouter } from "next/navigation"
+import classes from "./style.module.scss"
 
 export function ElectronicPage() {
+  const router = useRouter()
+
   return (
     <section className={classes.section_style}>
       <Logo />
@@ -23,7 +26,11 @@ export function ElectronicPage() {
           <p><strong>7. Cabos e Fios:</strong> <br /> Fios de energia, cabos de comunicação e cabos de conexão também fazem parte do lixo eletrônico, uma vez que possuem revestimentos e isolantes que podem ser prejudiciais.</p>
         </div>
       </Container>
-      <Button href="/#">Próximo</Button>
+      <Button asChild>
+        <button onClick={() => router.back()}>
+          Voltar
+        </button>
+      </Button>
     </section>
   )
 }
