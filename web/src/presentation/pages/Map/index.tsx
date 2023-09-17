@@ -1,6 +1,8 @@
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api'
 import classes from "./style.module.scss"
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
+import axios, { AxiosError } from 'axios'
+import { Markers } from './Markers'
 
 export function MapPage() {
   const { isLoaded } = useLoadScript({
@@ -15,6 +17,21 @@ export function MapPage() {
 
 function Map() {
   const center = useMemo(() => ({ lat: -23.5489, lng: -46.6388 }), [])
+
+  async function LoadMarkers() {
+    try {
+      const httpResponse = await axios.get(`${process.env.NEXT_PUBLIC_SERVER}/pevs/recyclables`)
+      console.log(httpResponse)
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        console.log(error)
+      }
+    }
+  }
+
+  useEffect(() => {
+    LoadMarkers()
+  }, [])
   
   return (
     <GoogleMap 
@@ -22,8 +39,7 @@ function Map() {
       center={center}
       mapContainerClassName={classes.map_container}
     >
-      <Marker position={{ lat: -23.5489, lng: -46.6388 }} />
-      <Marker position={{ lat: -23.5489, lng: -46.6389 }} />
+     <Markers />
     </GoogleMap>
   )
 }
