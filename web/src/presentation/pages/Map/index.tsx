@@ -5,6 +5,7 @@ import axios, { AxiosError } from "axios"
 import { Markers } from "./Markers"
 import { getGeocode, getLatLng } from 'use-places-autocomplete'
 import { FaSearchLocation } from 'react-icons/fa'
+import PEVS from '../../../data/pevs.json'
 
 export function MapPage() {
   const { isLoaded } = useLoadScript({
@@ -31,19 +32,22 @@ function Map() {
     setGetCenter({ lat, lng })
   }
 
-  async function LoadMarkers() {
-    try {
-      const httpResponse = await axios.get(`${process.env.NEXT_PUBLIC_SERVER}/pevs/recyclables`)
-      console.log(httpResponse)
-    } catch (error) {
-      if (error instanceof AxiosError) {
-        console.log(error)
-      }
-    }
-  }
+  const pev = [{lat: 52, lng: 15},{lat: 52, lng: 15}]
+
+  // async function LoadMarkers() {
+  //   try {
+  //     const httpResponse = await axios.get(`${process.env.NEXT_PUBLIC_SERVER}/pevs/recyclables`)
+  //     console.log(httpResponse)
+  //   } catch (error) {
+  //     if (error instanceof AxiosError) {
+  //       console.log(error)
+  //     }
+  //   }
+  // }
 
   useEffect(() => {
-    LoadMarkers()
+    // LoadMarkers()
+    console.log(PEVS)
   }, [])
 
   return (
@@ -60,17 +64,29 @@ function Map() {
         </button>
       </div>
       <GoogleMap 
-        zoom={14} 
+        zoom={12} 
         center={getCenter}
         mapContainerClassName={classes.map_container}
       >
-      <Markers />
+        <AllPevs />
       {selected?.lat !== undefined && (
         <Marker
           position={selected} 
         />    
       )}
       </GoogleMap>
+    </>
+  )
+}
+
+function AllPevs() {
+  return (
+    <>
+      {PEVS.map((item) => {
+        return (
+          <Markers pev={item} />
+        )
+      })}
     </>
   )
 }
