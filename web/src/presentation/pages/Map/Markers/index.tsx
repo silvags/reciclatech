@@ -1,19 +1,12 @@
 import { Marker } from "@react-google-maps/api";
-import * as Popover from '@radix-ui/react-popover';
-import classes from "./style.module.scss"
+import classes from "./style.module.scss";
 import { useEffect, useState } from "react";
-import { MdLocationOn, MdLocationPin } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import { AiFillClockCircle, AiFillCloseCircle, AiFillPhone } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
 
-import IMG from '../../../../../public/favicon.png'
-
 export function Markers() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-
-  useEffect(() => {
-    console.log(isOpen, 'open')
-  }, [isOpen])
 
   return (
     <div>
