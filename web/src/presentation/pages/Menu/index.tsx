@@ -13,7 +13,13 @@ export function MenuPage() {
   return (
     <section className={classes.section_style}>
       <ul>
-        <li><FaRecycle /> Tipos de resíduos e separação <span><FaCaretRight /></span></li>
+        <li>
+          <FaRecycle />
+          <Link href="/tipos-lixo">
+            Tipos de resíduos e separação
+          </Link>
+          <span><FaCaretRight /></span>
+        </li>
         <li><FaTruckMoving /> Agendar coleta <span><FaCaretRight /></span></li>
         <li><MdLibraryBooks /> Curiosidades sobre o meio ambiente <span><FaCaretRight /></span></li>
         <span className={classes.divisor}></span>

@@ -16,7 +16,6 @@ export function HomePage() {
           <p>Cada ação conta! Juntos, estamos construindo um amanhã mais verde e consciente.</p>
         </div>
       </Container>
-      <Button href="/tipos-lixo">Começar</Button>
     </section>
   )
 }
