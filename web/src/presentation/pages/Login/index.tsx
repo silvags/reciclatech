@@ -25,14 +25,15 @@ export function LoginPage() {
           Esqueceu a senha?
         </Link>
         <Button
-          css={{ width: '100%'}}
+          css={{ width: '90%'}}
           asChild
         >
           <button>Login</button>
         </Button>
       </form>
+      <p>Não tem cadastro?</p>
       <Button
-        css={{ width: '100%'}}
+        css={{ width: '90%'}}
         href="/cadastro"
       >
         Cadastrar

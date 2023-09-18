@@ -6,7 +6,9 @@ import { TypesPage } from "@/presentation/pages/Types";
 export default function Types() {
   return (
     <>
-      <TypesPage />
+      <main>
+        <TypesPage />
+      </main> 
       <Navigation />
     </>
   )

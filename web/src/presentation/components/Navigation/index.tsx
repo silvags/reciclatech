@@ -14,8 +14,12 @@ export function Navigation() {
       <Link href="/selecionar-tipo">
         <MdLocationOn />
       </Link>
-      <FaUserAlt />
-      <GiHamburgerMenu />
+      <Link href="/login">
+        <FaUserAlt />
+      </Link>
+      <Link href="/menu">
+        <GiHamburgerMenu />
+      </Link>
     </nav>
   )
 }

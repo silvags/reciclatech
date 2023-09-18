@@ -1,13 +1,13 @@
 'use client'
 
 import { Navigation } from "@/presentation/components/Navigation";
-import { HomePage } from "@/presentation/pages/Home";
+import { MenuPage } from "@/presentation/pages/Menu";
 
-export default function Home() {
+export default function Menu() {
   return (
     <>
       <main>
-        <HomePage />
+        <MenuPage />
       </main>
       <Navigation />
     </>
