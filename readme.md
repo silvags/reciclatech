@@ -15,7 +15,7 @@ MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega 
 - [x] Página com detalhes do PEV selecionado no mapa (nome, descrição, horário de atendimento, contatos...)
 
 ## Tecnologias utilizadas
-
+<div>
 <p>
 <a href=""><img alt="" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" align="left"></a>
 <a href=""><img alt="" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" align=left></a>
@@ -24,8 +24,10 @@ MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega 
 <a href=""><img alt="" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" align="left"></a>
 <a href=""><img alt="" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"align="left"></a>
 </p>
+</div>
+
 <p>
-Aaplicação web ReciclaTech pode ser considerada uma MERN Stack, devido às quatro principais tecnologias usadas no desenvolvimento da aplicação: MongoDB, Express, React e Node. Ela permite a fácil construção de uma arquitetura de três camadas (frontend, backend e banco de dados) usando JavaScript e JSON.
+Aaplicação web ReciclaTech pode ser considerada uma MERN Stack, devido às quatro principais tecnologias usadas no desenvolvimento da aplicação: MongoDB, Express, React e Node. Ela permite a fácil construção de uma arquitetura de três camadas (frontend, backend e banco de dados) usando Typescript e JSON.
 </p>
 
 ## Instalação
