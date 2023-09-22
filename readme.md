@@ -1,7 +1,8 @@
 <h1 align="center">Recicla Tech</h1>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![MIT License][license-shield]][license-url]
+<div align="center">
+<a href="https://lbesson.mit-license.org/"><img alt="" src="https://img.shields.io/badge/License-MIT-blue.svg" align="center"></a>
+</div>
 
 ## Descrição do Projeto
 
@@ -9,15 +10,57 @@ MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega 
 
 ## Funcionalidades
 
-## Tecnologias utilizadas
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
+- [x] Geolocalização do usuário.
+- [x] Mapa mostrando todos os PEVs próximos à localização usuário.
+- [x] Página com detalhes do PEV selecionado no mapa (nome, descrição, horário de atendimento, contatos...)
 
-## Instalação e utilização
+## Tecnologias utilizadas
+
+<p>
+<a href=""><img alt="" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" align="left"></a>
+<a href=""><img alt="" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" align=left></a>
+<a href=""><img alt="" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" align="left"></a>
+<a href=""><img alt="" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" align="left"></a>
+<a href=""><img alt="" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" align="left"></a>
+<a href=""><img alt="" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"align="left"></a>
+</p>
+<p>
+Aaplicação web ReciclaTech pode ser considerada uma MERN Stack, devido às quatro principais tecnologias usadas no desenvolvimento da aplicação: MongoDB, Express, React e Node. Ela permite a fácil construção de uma arquitetura de três camadas (frontend, backend e banco de dados) usando JavaScript e JSON.
+</p>
+
+## Instalação
 
 ### Prérequisitos
+Para clonar e executar este aplicativo, você precisará do Git e Node.js instalados em seu computador.
 
 ### Instalação
+No terminal de sua preferencia entre com as seguintes linha de comando para clonar o repositório:
+~~~
+git clone https://github.com/silvags/reciclatech.git
+~~~
+Para executar o servidor siga os seguintes passos:
+- Abrir a pasta server:
+~~~
+cd reciclatech/server
+~~~
+- Instale as dependências
+~~~
+npm install
+~~~
+- Inicie o seridor
+~~~
+npm start
+~~~
+#### Para executar a aplicação web
+- Instale as dependências
+~~~
+npm install
+~~~
+- Inicie o seridor
+~~~
+npm run dev
+~~~
+- Abra http://localhost:3000 com seu navegador para ver o resultado.
 
 ## Colaboradores
 
@@ -29,11 +72,8 @@ MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega 
 - Vanessa Gellert da Costa
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/silvags/reciclatech/graphs/contributors
+
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
+[NPM]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+[Typescript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white

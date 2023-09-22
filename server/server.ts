@@ -1,18 +1,15 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import cors from 'cors';
-import dbConfig from './config/dbConfig';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import mongoose from 'mongoose';
+import routes from './routes/pevRoutes';
 
 const app = express();
-
 app.use(cors());
+app.use(express.json());
 
 mongoose
-  .connect(dbConfig.dbConnString, {
-    dbName: dbConfig.dbName,
+  .connect( 'mongodb+srv://userapp:0HkZ6Qmb2frU9Ysw@cluster0.rvoavj4.mongodb.net/?retryWrites=true&w=majority', {
+    dbName: 'pevsDB',
   })
   .then(() => {
     console.log('Conexão com o MongoDB Atlas estabelecida');
@@ -21,8 +18,9 @@ mongoose
     console.error('Erro ao conectar ao MongoDB Atlas:', error);
   });
 
+app.use(routes);
 
-const port = dbConfig.port;
+const port = 5000;
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });

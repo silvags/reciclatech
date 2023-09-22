@@ -1,30 +1,48 @@
-import { Request, Response } from 'express';
-import Feature from '../models/pevModel';
+import express from 'express';
+import { PevModel } from '../models/pevModel';
 
-export const getPevsByResidueType = async (req: Request, res: Response) => {
-  try {
+export const getPevByResidueType = async (req: express.Request, res: express.Response) => {
+  try{
     const residueType = req.params.residueType;
-    const pevs = await Feature.find({ [`properties.residuesAccepted.${residueType}`]: { $exists: true } });
-    res.send(pevs);
+
+    if (residueType !== 'recyclables' && residueType !== 'electronics'){
+      return res.status(400).json({message: 'Tipo de resíduo inválido.'});
+    }
+
+    const query = {[`residuesAccepted.${residueType}`]: {$exists: true, $ne: []},
+  };
+
+  const Pevs = await PevModel.find(query)
+  .select('geometry name description category')
+  .exec();
+
+  return res.status(200).json(Pevs);
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).json({message: 'Erro ao buscar pevs.'});
   }
 };
 
-export const getPevById = async (req: Request, res: Response) => {
-  try {
-    const id = req.params.id;
-    const pev = await Feature.findOne({ 'properties.id': id });
-    if (!pev) {
-      return res.status(404).send('PEV não encontrado');
+export const getPevByName = async (req: express.Request, res: express.Response) => {
+  try{
+    const pevName = req.params.name;
+
+    if (!pevName){
+      return res.status(400).json({message: 'Nome do PEV não informado ou inválido.'});
     }
-    res.send(pev);
+
+    const query = {name: pevName};
+
+    const pev = await PevModel.findOne(query)
+    .select('-_id -__v -geometry')
+    .exec();
+
+    return res.status(200).json(pev);
   } catch (error) {
-    res.status(500).send(error);
+    res.json({message: 'Erro ao buscar pev.'});
   }
-};
+}
 
 export default {
-    getPevsByResidueType,
-    getPevById,
-}
+  getPevByResidueType,
+  getPevByName,
+};
