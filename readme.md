@@ -15,21 +15,22 @@ MVP de uma aplicação para busca e geolocalização de PEVs (Pontos de Entrega 
 - [x] Página com detalhes do PEV selecionado no mapa (nome, descrição, horário de atendimento, contatos...)
 
 ## Tecnologias utilizadas
-<div>
+
+<div align="center">
 <p>
-<a href=""><img alt="" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" align="left"></a>
-<a href=""><img alt="" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" align=left></a>
-<a href=""><img alt="" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" align="left"></a>
-<a href=""><img alt="" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" align="left"></a>
-<a href=""><img alt="" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" align="left"></a>
-<a href=""><img alt="" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"align="left"></a>
+<a href="https://www.mongodb.com/atlas/database"><img alt="" src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" align="center"></a>
+<a href="https://nodejs.org"><img alt="" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" align=center></a>
+<a href="https://expressjs.com"><img alt="" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" align="center"></a>
+<a href="https://react.dev"><img alt="" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" align="center"></a>
+<a href="https://nextjs.org/"><img alt="" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" align="center"></a>
+<a href="https://www.typescriptlang.org/"><img alt="" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"align="center"></a>
 </p>
 </div>
-
-<p>
-Aaplicação web ReciclaTech pode ser considerada uma MERN Stack, devido às quatro principais tecnologias usadas no desenvolvimento da aplicação: MongoDB, Express, React e Node. Ela permite a fácil construção de uma arquitetura de três camadas (frontend, backend e banco de dados) usando Typescript e JSON.
+<div>
+<p >
+A aplicação web ReciclaTech pode ser considerada uma MERN Stack, devido às quatro principais tecnologias usadas em seu desenvolvimento: MongoDB, Express, React e Node. Este conjunto de tecnologias permitiu a fácil construção de uma arquitetura de três camadas (frontend, backend e banco de dados) usando Typescript e JSON como principais linguagens.
 </p>
-
+</div>
 ## Instalação
 
 ### Prérequisitos
